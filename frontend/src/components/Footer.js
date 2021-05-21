@@ -6,7 +6,8 @@ const Footer = () => {
     <footer>
       <Container>
         <Row>
-          <Col className='text-center py-3'>Copyright &copy; ProShop</Col>
+          <Col className='text-center py-3'> Supporting WATER <span role='img'>🌊</span> for Kandivaram(Kandiyur)</Col>
+          <Col className='text-center py-3'> Copyright (c) 2020 Traversy Media </Col>
         </Row>
       </Container>
     </footer>

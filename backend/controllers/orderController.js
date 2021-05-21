@@ -60,7 +60,7 @@ const getOrderById = asyncHandler(async (req, res) => {
 const updateOrderToPaid = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id)
 
-  if (order) {
+  if (!order) {
     order.isPaid = true
     order.paidAt = Date.now()
     order.paymentResult = {
@@ -85,7 +85,7 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 const updateOrderToDelivered = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id)
 
-  if (order) {
+  if (!order) {
     order.isDelivered = true
     order.deliveredAt = Date.now()
 
@@ -102,7 +102,7 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
 // @route   GET /api/orders/myorders
 // @access  Private
 const getMyOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ user: req.user._id })
+  const orders = await Order.find({ user: req.user._id }).sort( { createdAt: -1 } )
   res.json(orders)
 })
 
@@ -110,7 +110,7 @@ const getMyOrders = asyncHandler(async (req, res) => {
 // @route   GET /api/orders
 // @access  Private/Admin
 const getOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({}).populate('user', 'id name')
+  const orders = await Order.find({}).populate('user', 'id name').sort( { createdAt: -1 } )
   res.json(orders)
 })
 

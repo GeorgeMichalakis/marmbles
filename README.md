@@ -1,13 +1,17 @@
-# ProShop eCommerce Platform
+# Farmer's store eCommerce Platform
 
-> eCommerce platform built with the MERN stack & Redux.
+> eCommerce platform built with the MERN stack & Redux. 
+This is possible through the following course by Brad Traversy and my sincere thanks to him. I wish you explore his github repo and support community through your apps. (https://www.udemy.com/course/mern-ecommerce). Please support our Kandiyur-Pillor irrigation 🌊 water movement by signing our cause in the change.org platform.
 
-This is the course project for my [MERN eCommerce From Scratch](https://www.udemy.com/course/mern-ecommerce) course
+## Note to Farmers, FIG and FPO leaders
 
-![screenshot](https://github.com/bradtraversy/proshop_mern/blob/master/uploads/Screen%20Shot%202020-09-29%20at%205.50.52%20PM.png)
+This pandemic has ravaged lives. Nevertheless it has brought us closer to one another and amplified our sense of belonging. You are welcome to use this repo for deploying websites to service your local communities. We appreciate your conservative measures to thwart Corona spread. Your digital presence just requires two steps 
+1. a Heroku account and 
+2. a MongoDB cloud account
+
 
 ## Features
-
+Following features are only a subset of Brad Traversky's repo. We encourage interested souls to explore MERN stack and extend new features.
 - Full featured shopping cart
 - Product reviews and ratings
 - Top products carousel
@@ -17,63 +21,20 @@ This is the course project for my [MERN eCommerce From Scratch](https://www.udem
 - Admin product management
 - Admin user management
 - Admin Order details page
-- Mark orders as delivered option
-- Checkout process (shipping, payment method, etc)
-- PayPal / credit card integration
-- Database seeder (products & users)
 
-## Note on Issues
-Please do not post issues here that are related to your own code when taking the course. Add those in the Udemy Q/A. If you clone THIS repo and there are issues, then you can submit
 
-## Usage
-
-### ES Modules in Node
-
-We us ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
-
-Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
-
-You can also install and setup Babel if you would like
+### Heroku and MongoDB
+1. Please sign up for Mongo Atlas cloud account and follow steps in Mongo folder.
+2. Please sign up for Heroku account and deploy the app.
 
 ### Env Variables
 
-Create a .env file in then root and add the following
-
+1. Click your App deployed on Heroku and choose settings tab
+2. Select Reveal Config Vars and plug in relevant values.
 ```
-NODE_ENV = development
-PORT = 5000
 MONGO_URI = your mongodb uri
 JWT_SECRET = 'abc123'
-PAYPAL_CLIENT_ID = your paypal client id
 ```
-
-### Install Dependencies (frontend & backend)
-
-```
-npm install
-cd frontend
-npm install
-```
-
-### Run
-
-```
-# Run frontend (:3000) & backend (:5000)
-npm run dev
-
-# Run backend only
-npm run server
-```
-
-## Build & Deploy
-
-```
-# Create frontend prod build
-cd frontend
-npm run build
-```
-
-There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
 
 ### Seed Database
 
@@ -90,22 +51,19 @@ npm run data:destroy
 ```
 Sample User Logins
 
-admin@example.com (Admin)
-123456
+farmer@example.com (Admin)
+123
 
-john@example.com (Customer)
-123456
+pegasus@example.com (Customer)
+1234
 
-jane@example.com (Customer)
-123456
 ```
-
 
 ## License
 
 The MIT License
 
-Copyright (c) 2020 Traversy Media https://traversymedia.com
+Acknowledgements and Copyright (c) 2020 Traversy Media https://traversymedia.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
