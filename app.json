@@ -1,0 +1,6 @@
+{
+    "name": "Farmer store",
+    "description": "Readily deployable commerce platform for farmers",
+    "MONGO_URI": "your mongo uri",
+    "JWT_SECRET" : "something"
+}

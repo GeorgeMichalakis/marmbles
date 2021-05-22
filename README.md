@@ -1,7 +1,8 @@
 # Farmer's store eCommerce Platform
 
 > eCommerce platform built with the MERN stack & Redux. 
-This is possible through the following course by Brad Traversy and my sincere thanks to him. I wish you explore his github repo and support community through your apps. (https://www.udemy.com/course/mern-ecommerce). Please support our Kandiyur-Pillor irrigation 🌊 water movement by signing our cause in the change.org platform.
+This is possible through the following course by Brad Traversy and my sincere thanks to him. I wish you explore his github repo (https://github.com/bradtraversy/proshop_mern) and support community through your apps. (https://www.udemy.com/course/mern-ecommerce). Please support our Kandiyur-Pillor irrigation 🌊 water movement by signing our cause in the change.org platform.
+Live URL : (https://farmer-store.herokuapp.com)
 
 ## Note to Farmers, FIG and FPO leaders
 
@@ -26,6 +27,7 @@ Following features are only a subset of Brad Traversky's repo. We encourage inte
 ### Heroku and MongoDB
 1. Please sign up for Mongo Atlas cloud account and follow steps in Mongo folder.
 2. Please sign up for Heroku account and deploy the app.
+[![Deploy](https://wwww.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nishanthkumarchandrasekaran/farmer-store)
 
 ### Env Variables
 
