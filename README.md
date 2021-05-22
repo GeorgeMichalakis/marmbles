@@ -3,7 +3,7 @@
 > eCommerce platform built with the MERN stack & Redux. 
 This is possible through the following course by Brad Traversy and my sincere thanks to him. I wish you explore his github repo (https://github.com/bradtraversy/proshop_mern) and support community through your apps. (https://www.udemy.com/course/mern-ecommerce). 
 
-## Please support our Kandiyur-Pillor irrigation 🌊 water movement by signing our cause in the change.org platform.
+#### Please support our Kandiyur-Pillor irrigation 🌊 water movement by signing our cause in the change.org platform.(http://chng.it/HWrFtTLb7x)
 
 ## Live URL : (https://farmer-store.herokuapp.com)
 
