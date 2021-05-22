@@ -197,7 +197,7 @@ const OrderScreen = ({ match, history }) => {
               </ListGroup.Item>
               
                 <Row>
-                  <Col className='text-center py-3'> Thank you. <span role='img'>😃</span> <a href = 'http://chng.it/HWrFtTLb7x'>Please support our Kandiyur- Pillor water movement.</a></Col>
+                  <Col className='text-center py-3'> Thank you. <span role='img'>😃</span> <a href = 'http://chng.it/HWrFtTLb7x'>Please click to support Kandiyur- Pillor water movement and sign in Change.org.</a></Col>
                 </Row>
               
             </ListGroup>
