@@ -30,7 +30,7 @@ Following features are only a subset of Brad Traversky's repo. We encourage inte
 ### Heroku and MongoDB
 1. Please sign up for Mongo Atlas cloud account and follow steps in Instructions -app deployment PDF.
 2. Please sign up for Heroku account and deploy the app.
-[![Deploy](https://wwww.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/Nishanthkumarchandrasekaran/farmer-store)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nishanthkumarchandrasekaran/farmer-store)
 
 ### Env Variables
 
