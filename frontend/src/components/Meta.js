@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Farmer store',
-  description: 'We sell the fresh produce',
-  keywords: 'Vegetables, Fruits, Exotic',
+  title: 'Papaioannou Marmbles',
+  description: 'Internal Product Catalog',
+  keywords: 'Marmbles, Catalog',
 }
 
 export default Meta
