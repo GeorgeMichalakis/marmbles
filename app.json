@@ -1,6 +1,6 @@
 {
-    "name": "Farmer store",
-    "description": "Readily deployable commerce platform for farmers",
-    "MONGO_URI": "your mongo uri",
-    "JWT_SECRET" : "something"
+    "name": "Papaioannou Marmbles Catalog",
+    "description": "Internal Catalog",
+    "MONGO_URI": "mongodb+srv://admin:admin@papaioannoucluster.7oc9hyk.mongodb.net/?retryWrites=true&w=majority",
+    "JWT_SECRET" : "E9A7F6612E77C3DD1348E8153656C"
 }
