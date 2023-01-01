@@ -31,10 +31,9 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    type: {
+    brand: {
       type: String,
       required: true,
-      enum: ['Slab', 'Block']
     },
     category: {
       type: String,
