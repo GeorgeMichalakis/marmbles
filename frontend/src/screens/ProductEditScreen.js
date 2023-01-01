@@ -150,7 +150,6 @@ const ProductEditScreen = ({ match, history }) => {
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
               >
-              <option value=''>Select Type</option>
               <option value='Slab'>Slab</option>
               <option value='Block'>Block</option>
               </Form.Control>
