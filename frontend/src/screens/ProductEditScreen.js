@@ -48,6 +48,8 @@ const ProductEditScreen = ({ match, history }) => {
         setCategory(product.category)
         setCountInStock(product.countInStock)
         setDescription(product.description)
+        setDimensions(product.dimensions)
+        setTons(product.tons)
       }
     }
   }, [dispatch, history, productId, product, successUpdate])
@@ -153,7 +155,7 @@ const ProductEditScreen = ({ match, history }) => {
                 type='text'
                 placeholder='Enter dimensions'
                 value={dimensions}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e) => setDimensions(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
@@ -163,7 +165,7 @@ const ProductEditScreen = ({ match, history }) => {
                 type='text'
                 placeholder='Enter tons'
                 value={tons}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e) => setTons(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
