@@ -68,6 +68,8 @@ const createProduct = asyncHandler(async (req, res) => {
     countInStock: 0,
     numReviews: 0,
     description: 'Sample description',
+    dimensions: 'Sample dimensions',
+    tons: 'Sample tons'
   })
 
   const createdProduct = await product.save()
