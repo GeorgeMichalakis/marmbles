@@ -15,7 +15,7 @@ const ProductEditScreen = ({ match, history }) => {
   const [name, setName] = useState('')
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState('')
-  const [type, setType] = useState('')
+  const [brand, setBrand] = useState('')
   const [category, setCategory] = useState('')
   const [countInStock, setCountInStock] = useState(0)
   const [description, setDescription] = useState('')
@@ -44,7 +44,7 @@ const ProductEditScreen = ({ match, history }) => {
         setName(product.name)
         setPrice(product.price)
         setImage(product.image)
-        setType(product.type)
+        setBrand(product.brand)
         setCategory(product.category)
         setCountInStock(product.countInStock)
         setDescription(product.description)
@@ -83,7 +83,7 @@ const ProductEditScreen = ({ match, history }) => {
         name,
         price,
         image,
-        type,
+        brand,
         category,
         description,
         countInStock,
@@ -143,14 +143,20 @@ const ProductEditScreen = ({ match, history }) => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Form.Group controlId='type'>
-              <Form.Label>Type</Form.Label>
+            <Form.Group controlId='brand'>
+              <Form.Label>Brand</Form.Label>
               <Form.Control
-                type='text'
-                placeholder='Enter Type'
-                value={type}
-                onChange={(e) => setType(e.target.value)}
-              ></Form.Control>
+                as='select'
+                value={brand}
+                onChange={(e) => setBrand(e.target.value)}
+              >
+              <option value=''>Select...</option>
+              <option value='1'>1 - Poor</option>
+              <option value='2'>2 - Fair</option>
+              <option value='3'>3 - Good</option>
+              <option value='4'>4 - Very Good</option>
+              <option value='5'>5 - Excellent</option>
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId='countInStock'>
