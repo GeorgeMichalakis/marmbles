@@ -15,7 +15,7 @@ const ProductEditScreen = ({ match, history }) => {
   const [name, setName] = useState('')
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState('')
-  const [brand, setBrand] = useState('')
+  const [type, setType] = useState('')
   const [category, setCategory] = useState('')
   const [countInStock, setCountInStock] = useState(0)
   const [description, setDescription] = useState('')
@@ -44,7 +44,7 @@ const ProductEditScreen = ({ match, history }) => {
         setName(product.name)
         setPrice(product.price)
         setImage(product.image)
-        setBrand(product.brand)
+        setType(product.type)
         setCategory(product.category)
         setCountInStock(product.countInStock)
         setDescription(product.description)
@@ -83,7 +83,7 @@ const ProductEditScreen = ({ match, history }) => {
         name,
         price,
         image,
-        brand,
+        type,
         category,
         description,
         countInStock,
@@ -143,14 +143,18 @@ const ProductEditScreen = ({ match, history }) => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Form.Group controlId='brand'>
-              <Form.Label>Brand</Form.Label>
+            <Form.Group controlId='type'>
+              <Form.Label>Type</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='Enter brand'
-                value={brand}
-                onChange={(e) => setBrand(e.target.value)}
-              ></Form.Control>
+                placeholder='Enter Type'
+                value={type}
+                onChange={(e) => setType(e.target.value)}
+              >
+              <option value=''>Select...</option>
+              <option value='Slab'>Slab</option>
+              <option value='Block'>Block</option>
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId='countInStock'>
