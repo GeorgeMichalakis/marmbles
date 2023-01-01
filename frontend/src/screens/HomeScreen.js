@@ -26,15 +26,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <Meta />
-      {!keyword ? (
-        <ProductCarousel />
-      ) : (
-        <Link to='/' className='btn btn-light'>
-          Go Back
-        </Link>
-      )}
-      <h1>Internal Marmbles Catalog</h1>
+      <h1>Marbles Categories</h1>
       {loading ? (
         <Loader />
       ) : error ? (
