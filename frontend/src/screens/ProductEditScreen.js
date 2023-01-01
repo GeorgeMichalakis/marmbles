@@ -150,11 +150,7 @@ const ProductEditScreen = ({ match, history }) => {
                 placeholder='Enter Type'
                 value={type}
                 onChange={(e) => setType(e.target.value)}
-              >
-              <option value=''>Select...</option>
-              <option value='Slab'>Slab</option>
-              <option value='Block'>Block</option>
-              </Form.Control>
+              ></Form.Control>
             </Form.Group>
 
             <Form.Group controlId='countInStock'>
