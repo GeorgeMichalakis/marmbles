@@ -84,6 +84,8 @@ const ProductEditScreen = ({ match, history }) => {
         price,
         image,
         brand,
+        dimensions,
+        tons,
         category,
         description,
         countInStock,
@@ -116,16 +118,6 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='price'>
-              <Form.Label>Price</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='Enter price'
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
             <Form.Group controlId='image'>
               <Form.Label>Image</Form.Label>
               <Form.Control
@@ -155,6 +147,26 @@ const ProductEditScreen = ({ match, history }) => {
               </Form.Control>
             </Form.Group>
 
+            <Form.Group controlId='dimensions'>
+              <Form.Label>Dimensions</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter dimensions'
+                value={dimensions}
+                onChange={(e) => setDescription(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='tons'>
+              <Form.Label>Tons</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter tons'
+                value={tons}
+                onChange={(e) => setDescription(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
             <Form.Group controlId='countInStock'>
               <Form.Label>Count In Stock</Form.Label>
               <Form.Control
@@ -166,13 +178,16 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='category'>
-              <Form.Label>Category</Form.Label>
+              <Form.Label>Status</Form.Label>
               <Form.Control
-                type='text'
-                placeholder='Enter category'
+                as='select'
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-              ></Form.Control>
+              >
+              <option value='Quarry'>Quarry</option>
+              <option value='Factory'>Factory</option>
+              <option value='Sold'>Sold</option>
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId='description'>
