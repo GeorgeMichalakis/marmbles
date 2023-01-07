@@ -28,7 +28,12 @@ const HomeScreen = ({ match }) => {
     <div>
       {loading && <Loader />}
       <h1 align="center">Marbles Categories</h1>
-      <p><Link to='./Marmbles'><img src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673117772/general/Polished-White-Onyx-Marble-Slabs-Kitchen-Countertops-Vanitytop-Worktop-Project-Bathroom_gnq8e1.jpg" style="width:50px;height:50px;"/></Link></p>
+      <Row className='py-3'>
+        <Col>
+        <img src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;"></img>
+        <Link to='./Marmbles'>Marmbles</Link>
+        </Col>
+      </Row>
     </div>
   )
 }
