@@ -25,18 +25,29 @@ const HomeScreen = ({ match }) => {
   }, [dispatch, keyword, pageNumber])
 
   return (
-    <FormContainer>
-      {loading && <Loader />}
-      <h1 align="center">Marbles Categories</h1>
-      <Row className='py-3'>
-        <Col>
-          Go to Marmbles
-          <Link to='./Marmbles'>
-            Login
-          </Link>
-        </Col>
-      </Row>
-    </FormContainer>
+    <>
+      <h1 align="center">Pick a category</h1>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant='danger'>{error}</Message>
+      ) : (
+        <>
+          <Row>
+            {products.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <Paginate
+            pages={pages}
+            page={page}
+            keyword={keyword ? keyword : ''}
+          />
+        </>
+      )}
+    </>
   )
 }
 
