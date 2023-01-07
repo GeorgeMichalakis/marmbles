@@ -17,14 +17,8 @@ const Product = ({ product }) => {
           </Card.Title>
         </Link>
 
-        <Card.Text as='div'>
-          <Rating
-            value={product.rating}
-            text={`${product.numReviews} reviews`}
-          />
-        </Card.Text>
-
-        <Card.Text as='h3'>${product.price}/Kg</Card.Text>
+        <Card.Text as='h2'>Type: ${product.brand}</Card.Text>
+        <Card.Text as='h3'>Status: ${product.category}</Card.Text>
       </Card.Body>
     </Card>
   )
