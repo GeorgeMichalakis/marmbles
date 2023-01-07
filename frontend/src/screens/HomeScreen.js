@@ -30,7 +30,12 @@ const HomeScreen = ({ match }) => {
       <h1 align="center">Marbles Categories</h1>
       <Row className='py-3'>
         <Link to="./Marmbles">
-          <Image src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673117772/general/Polished-White-Onyx-Marble-Slabs-Kitchen-Countertops-Vanitytop-Worktop-Project-Bathroom_gnq8e1.jpg" />
+          <Image src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673119000/general/carrara-white-marble-block-p560155-1b_q4vs8y.jpg" width={250} height={250} />
+        </Link>
+      </Row>
+      <Row className='py-3'>
+        <Link to="./Marmbles">
+          <Image src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673117772/general/Polished-White-Onyx-Marble-Slabs-Kitchen-Countertops-Vanitytop-Worktop-Project-Bathroom_gnq8e1.jpg" width={250} height={250} />
         </Link>
       </Row>
     </div>
