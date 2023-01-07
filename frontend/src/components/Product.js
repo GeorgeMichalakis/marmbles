@@ -17,8 +17,8 @@ const Product = ({ product }) => {
           </Card.Title>
         </Link>
 
-        <Card.Text as='h2'>Type: ${product.brand}</Card.Text>
-        <Card.Text as='h3'>Status: ${product.category}</Card.Text>
+        <Card.Text as='div'>Type: {product.brand}</Card.Text>
+        <Card.Text as='div'>Status: {product.category}</Card.Text>
       </Card.Body>
     </Card>
   )
