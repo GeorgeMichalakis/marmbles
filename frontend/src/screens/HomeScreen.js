@@ -29,9 +29,11 @@ const HomeScreen = ({ match }) => {
       {loading && <Loader />}
       <h1 align="center">Marbles Categories</h1>
       <Row className='py-3'>
+        <Col md={6}>
+          <Image src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" fluid />
+        </Col>
         <Col>
-        <img src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;"></img>
-        <Link to='./Marmbles'>Marmbles</Link>
+          <Link to='./Marmbles'>Marmbles</Link>
         </Col>
       </Row>
     </div>
