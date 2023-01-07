@@ -29,12 +29,9 @@ const HomeScreen = ({ match }) => {
       {loading && <Loader />}
       <h1 align="center">Marbles Categories</h1>
       <Row className='py-3'>
-        <Col md={6}>
-          <Image src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" fluid />
-        </Col>
-        <Col>
-          <Link to='./Marmbles'>Marmbles</Link>
-        </Col>
+        <Link to="./Marmbles">
+          <Image src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673117772/general/Polished-White-Onyx-Marble-Slabs-Kitchen-Countertops-Vanitytop-Worktop-Project-Bathroom_gnq8e1.jpg" />
+        </Link>
       </Row>
     </div>
   )
