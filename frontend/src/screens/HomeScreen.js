@@ -25,7 +25,7 @@ const HomeScreen = ({ match }) => {
   }, [dispatch, keyword, pageNumber])
 
   return (
-    <FormContainer>
+    <div>
       {loading && <Loader />}
       <h1 align="center">Marbles Categories</h1>
       <Row className='py-3'>
@@ -36,7 +36,7 @@ const HomeScreen = ({ match }) => {
           </Link>
         </Col>
       </Row>
-    </FormContainer>
+    </div>
   )
 }
 
