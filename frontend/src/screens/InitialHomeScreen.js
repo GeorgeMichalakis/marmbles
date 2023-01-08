@@ -34,7 +34,7 @@ const HomeScreen = ({ match }) => {
       ) : (
         <>
           <Row>
-            {products.filter((product) => product.brand === "Slab"(
+            {products.filter(((product) => product.brand === "Slab")(
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={product} />
               </Col>
