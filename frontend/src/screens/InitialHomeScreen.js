@@ -19,6 +19,7 @@ const HomeScreen = ({ match }) => {
 
   const productList = useSelector((state) => state.productList)
   const { loading, error, products, page, pages } = productList
+  const filteredProducts = products.filter(product => product.brand === "Slab");
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
@@ -34,11 +35,11 @@ const HomeScreen = ({ match }) => {
       ) : (
         <>
           <Row>
-            {products.map((product) => 
-            {if (product.brand=="Slab")
+            {filteredProducts.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={product} />
-              </Col>})}
+              </Col>
+            ))}
           </Row>
           <Paginate
             pages={pages}
