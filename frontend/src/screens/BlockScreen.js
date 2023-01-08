@@ -19,7 +19,7 @@ const HomeScreen = ({ match }) => {
 
   const productList = useSelector((state) => state.productList)
   const { loading, error, products, page, pages } = productList
-  const filteredProducts = products.filter(product => product.brand === "Slab");
+  const filteredProducts = products.filter(product => product.brand === "Block");
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
@@ -27,7 +27,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <h1 align="center">Pick a category</h1>
+      <h1 align="center">Blocks</h1>
       {loading ? (
         <Loader />
       ) : error ? (

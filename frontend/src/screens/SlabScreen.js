@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, Image } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -19,28 +19,36 @@ const HomeScreen = ({ match }) => {
 
   const productList = useSelector((state) => state.productList)
   const { loading, error, products, page, pages } = productList
+  const filteredProducts = products.filter(product => product.brand === "Slab");
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber))
   }, [dispatch, keyword, pageNumber])
 
   return (
-    <div>
-      {loading && <Loader />}
-      <h1 align="center">Marbles Categories</h1>
-      <Row>
-        <Col className='py-3'>
-          <Link to="./Blocks">
-            <Image src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673119000/general/carrara-white-marble-block-p560155-1b_q4vs8y.jpg" width={500} height={500} />
-          </Link>
-        </Col>
-        <Col className='py-3'>
-          <Link to="./Slabs">
-            <Image src="https://res.cloudinary.com/dabw2e3sf/image/upload/v1673117772/general/Polished-White-Onyx-Marble-Slabs-Kitchen-Countertops-Vanitytop-Worktop-Project-Bathroom_gnq8e1.jpg" width={500} height={500} />
-          </Link>
-        </Col>
-      </Row>
-    </div>
+    <>
+      <h1 align="center">Slabs</h1>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant='danger'>{error}</Message>
+      ) : (
+        <>
+          <Row>
+            {filteredProducts.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <Paginate
+            pages={pages}
+            page={page}
+            keyword={keyword ? keyword : ''}
+          />
+        </>
+      )}
+    </>
   )
 }
 
